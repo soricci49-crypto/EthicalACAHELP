@@ -1,0 +1,2 @@
+# EthicalACAHELP
+ai studying buddy
