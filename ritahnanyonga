@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AcaHelp by NANYONGA RITAH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📘 AcaHelp</h1>
+    <p>Your AI Education Buddy – Powered by Profferitah</p>
+  </header>
+
+  <main>
+    <section class="prompt-section">
+      <h2>Ask Profferitah</h2>
+      <textarea id="userPrompt" placeholder="Type your question or prompt here..."></textarea>
+      <button onclick="generateAnswer()">Submit</button>
+      <div id="response"></div>
+    </section>
+
+    <section class="upload-section">
+      <h2>Upload a File</h2>
+      <input type="file" id="fileUpload" />
+      <button onclick="uploadFile()">Upload</button>
+      <p id="uploadStatus"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 AcaHelp by NANYONGA RITAH</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6fa;
+  color: #333;
+}
+
+header {
+  background: #004aad;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+button {
+  background: #004aad;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0066ff;
+}
+
+#response, #uploadStatus {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e9f1ff;
+  border-radius: 5px;
+}
+function generateAnswer() {
+  const prompt = document.getElementById("userPrompt").value;
+  const responseDiv = document.getElementById("response");
+
+  if (!prompt) {
+    responseDiv.innerText = "⚠️ Please enter a question.";
+    return;
+  }
+
+  // Placeholder response (you can later connect to AI like Firebase, Gemini, or OpenAI)
+  responseDiv.innerText = "🤖 Profferitah says: I have received your prompt → " + prompt;
+}
+
+function uploadFile() {
+  const fileInput = document.getElementById("fileUpload");
+  const status = document.getElementById("uploadStatus");
+
+  if (fileInput.files.length === 0) {
+    status.innerText = "⚠️ Please select a file first.";
+    return;
+  }
+
+  const file = fileInput.files[0];
+  status.innerText = `✅ File "${file.name}" uploaded successfully (simulation).`;
+}
