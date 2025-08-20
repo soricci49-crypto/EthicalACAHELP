@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AcaHelp by NANYONGA RITAH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📘 AcaHelp</h1>
+    <p>Your AI Education Buddy – Powered by Profferitah</p>
+  </header>
+
+  <main>
+    <section class="prompt-section">
+      <h2>Ask Profferitah</h2>
+      <textarea id="userPrompt" placeholder="Type your question or prompt here..."></textarea>
+      <button onclick="generateAnswer()">Submit</button>
+      <div id="response"></div>
+    </section>
+
+    <section class="upload-section">
+      <h2>Upload a File</h2>
+      <input type="file" id="fileUpload" />
+      <button onclick="uploadFile()">Upload</button>
+      <p id="uploadStatus"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 AcaHelp by NANYONGA RITAH</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
