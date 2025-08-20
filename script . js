@@ -1,0 +1,25 @@
+function generateAnswer() {
+  const prompt = document.getElementById("userPrompt").value;
+  const responseDiv = document.getElementById("response");
+
+  if (!prompt) {
+    responseDiv.innerText = "⚠️ Please enter a question.";
+    return;
+  }
+
+  // Placeholder response (you can later connect to AI like Firebase, Gemini, or OpenAI)
+  responseDiv.innerText = "🤖 Profferitah says: I have received your prompt → " + prompt;
+}
+
+function uploadFile() {
+  const fileInput = document.getElementById("fileUpload");
+  const status = document.getElementById("uploadStatus");
+
+  if (fileInput.files.length === 0) {
+    status.innerText = "⚠️ Please select a file first.";
+    return;
+  }
+
+  const file = fileInput.files[0];
+  status.innerText = `✅ File "${file.name}" uploaded successfully (simulation).`;
+}
